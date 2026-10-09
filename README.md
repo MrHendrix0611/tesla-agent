@@ -1,6 +1,6 @@
-# Tesla Agent — da V0.1 à V0.6.0
+# Tesla Agent 
 
-**Agente de IA para desenvolvimento de software e automações, construído em Python com harness próprio.**
+**Agente de IA Open Source para desenvolvimento de software e automações, construído em Python com harness próprio.**
 
 > **Criador:** **Guilherme Hendrik**  
 > [GitHub](https://github.com/MrHendrix0611) · [LinkedIn](https://www.linkedin.com/in/guilherme-hendrik-59775326a/) · [Instagram](https://www.instagram.com/hxtech_/)

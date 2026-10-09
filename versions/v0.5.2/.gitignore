@@ -1,0 +1,46 @@
+# Credenciais (inclusive em snapshots historicos)
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+**/secrets.*
+
+# Estado privado do Tesla
+.tesla/
+**/.tesla/
+data/
+**/data/
+logs/
+**/logs/
+workspace/
+**/workspace/
+
+# Dependencias e caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+node_modules/
+
+# Arquivos locais/instaladores
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.msi
+*.exe
+*.zip
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db

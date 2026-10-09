@@ -1,0 +1,32 @@
+{
+  "origem": "Hefesto Agent.zip",
+  "arquivos_mantidos_por_versao": {
+    "v0.1": 15,
+    "v0.2": 15,
+    "v0.3": 15,
+    "v0.4": 22,
+    "v0.5": 28,
+    "v0.5.1": 31,
+    "v0.5.2": 33,
+    "v0.5.3": 34,
+    "v0.5.4": 36,
+    "v0.5.5": 39,
+    "v0.5.6": 47,
+    "v0.5.7": 52,
+    "v0.5.8": 56,
+    "v0.5.9": 60,
+    "v0.6.0": 63
+  },
+  "remocoes": {
+    "material_externo_versoes": 9,
+    "amostras_obsoletos_credenciais": 139,
+    "cache_estado_local": 331
+  },
+  "observacoes": [
+    "Snapshots v0.1 a v0.6.0 realmente presentes no arquivo original.",
+    "v0.5.1 foi normalizada de um diretório aninhado com nome antigo.",
+    "Sem incluir chaves, logs e checkpoints privados.",
+    "Arquivos de teste do usuário (calculator.py/test_calculator.py) não fazem parte do código do harness e foram excluídos.",
+    "Os testes automatizados dentro da pasta tests/ foram preservados."
+  ]
+}

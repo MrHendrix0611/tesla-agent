@@ -57,12 +57,3 @@ flowchart LR
     PA --> QA[QA unittest]
     QA --> RV[Revisão e veredito]
 ```
-
-## Publicação segura
-
-- **Não inclua chaves de API:** use `.env.example` em cada versão e mantenha o `.env` somente local.
-- **Não inclua dados de sessão:** logs, `.tesla/`, caches e arquivos de teste gerados foram removidos desta distribuição.
-- **O código histórico pode conter limitações conhecidas:** confira os READMEs de versão e execute os testes antes de usar.
-- **Licença:** não foi definida pelo criador. Antes de declarar o repositório como open source sob uma licença específica, adicione o arquivo `LICENSE` de sua escolha.
-
-Consulte [CHANGELOG.md](CHANGELOG.md), [ROADMAP.md](ROADMAP.md), [SECURITY.md](SECURITY.md) e [GUIA_PUBLICACAO.md](GUIA_PUBLICACAO.md).

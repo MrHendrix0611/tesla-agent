@@ -1,0 +1,27 @@
+Digitar uma solicitação no terminal → agente envia para um LLM → recebe resposta → mantém o contexto da conversa.
+
+
+                    VOCÊ
+                     │
+                     ▼
+              ┌─────────────┐
+              │     CLI     │
+              │   main.py   │
+              └──────┬──────┘
+                     │
+                     ▼
+              ┌─────────────┐
+              │    Agent    │
+              │   agent.py  │
+              └──────┬──────┘
+                     │
+                     ▼
+              ┌─────────────┐
+              │     LLM     │
+              │   provider  │
+              └──────┬──────┘
+                     │
+                     ▼
+              ┌─────────────┐
+              │   Modelo    │
+              └─────────────┘

@@ -196,7 +196,13 @@ O Tesla executa ações locais e pode modificar arquivos. **Inspecione as opera�
 
 ## 📄 Licença
 
-A licença de distribuição e reutilização ainda precisa ser definida. A disponibilidade pública do código, por si só, **não concede automaticamente permissão de uso, modificação ou redistribuição**. Antes de aceitar contribuições externas ou apresentar formalmente o projeto como open source, inclua um arquivo `LICENSE` com os termos escolhidos.
+O Tesla Agent é um projeto open source distribuído sob a **Licença MIT**.
+
+Você pode utilizar, estudar, modificar e compartilhar o código, inclusive em projetos comerciais, respeitando os termos da licença.
+
+Desenvolvido por **[Guilherme Hendrik](https://github.com/MrHendrix0611)**.
+
+Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 🤝 Contribuições
 

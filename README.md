@@ -7,7 +7,7 @@
 
 ## Sobre o projeto
 
-O projeto começou como **Hefesto Agent** (V0.1–V0.5.4) e passou a se chamar **Tesla Agent** a partir da V0.5.5. A evolução inclui CLI, modelos LLM, memória de sessão, Skills, ferramentas, permissões, seleção inteligente de modelos, controle de custos, auditoria, análise de repositórios, planejamento, edição de código, RAG, MCP e múltiplos agentes.
+O projeto começou com o propósito de afirmar que até mesmo modelos pequenos de IA podem ter uma enorme eficiência e qualidade de entrega quando se tem um Harness bem estruturado. Nesse repositório disponibilizo todas as versões do Tesla, desde a v0.1. A evolução inclui CLI, modelos LLM, memória de sessão, Skills, ferramentas, permissões, seleção inteligente de modelos, controle de custos, auditoria, análise de repositórios, planejamento, edição de código, RAG, MCP e múltiplos agentes.
 
 ## Navegue pelas versões
 

@@ -1,67 +1,80 @@
 <div align="center">
 
-# ⚡ Tesla Agent
+<img src="versions/v0.7.0/web/static/tesla-mark.png" alt="Símbolo do Tesla Agent" width="88" />
 
-### Um agente de IA para desenvolvimento de software e automações, construído em Python com um harness próprio.
+# Tesla Agent
 
-**Da primeira CLI à orquestração multiagentes — um projeto documentado versão por versão.**
+**Agente de IA para desenvolvimento de software e automações, construído em Python com harness próprio.**
 
-[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Versão](https://img.shields.io/badge/versão-v0.6.0-6A5ACD?style=for-the-badge)](versions/v0.6.0/README.md)
-[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-F59E0B?style=for-the-badge)](#-roadmap)
+Do terminal ao Dashboard Web e à integração com VS Code, com a evolução do código documentada em cada versão.
 
-**Criado e desenvolvido por Guilherme Hendrik**
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Versão atual](https://img.shields.io/badge/vers%C3%A3o-v0.7.0-2563EB?style=flat-square)](versions/v0.7.0/README.md)
+[![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-22A06B?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-E1A12B?style=flat-square)](#roadmap)
 
-[![GitHub](https://img.shields.io/badge/GitHub-MrHendrix0611-181717?style=flat-square&logo=github)](https://github.com/MrHendrix0611)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Guilherme%20Hendrik-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/guilherme-hendrik-59775326a/)
-[![Instagram](https://img.shields.io/badge/Instagram-hxtech-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/hxtech_/)
+**Criado por Guilherme Hendrik**
 
-[Sobre](#-sobre-o-projeto) · [Funcionalidades](#-funcionalidades) · [Versões](#-histórico-de-versões) · [Instalação](#-como-executar) · [Arquitetura](#-arquitetura) · [Roadmap](#-roadmap)
+[GitHub](https://github.com/MrHendrix0611) · [LinkedIn](https://www.linkedin.com/in/guilherme-hendrik-59775326a/) · [Instagram](https://www.instagram.com/hxtech_/)
+
+[Sobre](#sobre-o-projeto) · [Funcionalidades](#funcionalidades) · [Versões](#histórico-de-versões) · [Instalação](#como-executar-a-v070) · [Arquitetura](#arquitetura-da-v070) · [Roadmap](#roadmap)
 
 </div>
 
 ---
 
-## 💡 Sobre o projeto
+## Sobre o projeto
 
-O **Tesla Agent** nasceu de uma pergunta: **até onde um modelo de IA pequeno ou gratuito pode chegar quando trabalha com um harness bem estruturado?**
+Comecei o Tesla Agent com uma pergunta: **quanto um modelo de IA pequeno ou gratuito consegue entregar quando recebe um harness bem estruturado?**
 
-Minha proposta é demonstrar, na prática, que a qualidade de um agente não depende apenas do tamanho ou da capacidade isolada do modelo. **Arquitetura, contexto, ferramentas, planejamento, verificações e controle de execução** também influenciam diretamente a qualidade das entregas.
+O projeto explora essa ideia com código real. Em vez de depender apenas do modelo, o Tesla combina contexto, ferramentas, permissões, planejamento, execução de testes e revisão. O objetivo é tornar tarefas de desenvolvimento e automação mais controláveis, verificáveis e reproduzíveis.
 
-O projeto começou como uma aplicação simples de linha de comando, inicialmente chamada **Hefesto Agent**, e evoluiu para o **Tesla Agent**: um agente voltado ao desenvolvimento de software e à automação de tarefas, com memória, integração com ferramentas externas e orquestração de papéis especializados.
+A primeira versão era uma CLI simples e se chamava **Hefesto Agent**. Nas versões seguintes vieram os provedores de LLM, Skills, ferramentas, memória, RAG, MCP e a orquestração multiagentes. **Na v0.7.0, o projeto ganhou um Dashboard Web e uma extensão inicial para VS Code.**
 
-Este repositório reúne os **snapshots de código e a documentação de cada versão**, desde a **v0.1 até a v0.6.0**, para que qualquer pessoa possa estudar como a arquitetura foi evoluindo — incluindo decisões, recursos implementados e limitações.
+Este repositório preserva os snapshots e READMEs de **v0.1 a v0.7.0**. Cada pasta permite acompanhar o que foi implementado, quais comandos estavam disponíveis e como a arquitetura mudou.
 
-> **Estado atual:** projeto experimental e em desenvolvimento. A v0.6.0 é a versão mais recente documentada neste repositório; as versões anteriores permanecem disponíveis para estudo e comparação.
+> **Estado do projeto:** experimental e em evolução. A v0.7.0 é a versão mais recente disponível; não é apresentada como produto pronto para ambientes de produção.
 
-## 🎯 Objetivos
+## Objetivos
 
-- Investigar como **harness engineering** pode aumentar a utilidade prática de modelos pequenos e gratuitos.
-- Construir um agente de desenvolvimento com **arquitetura modular, extensível e auditável**.
-- Integrar diferentes provedores de LLM sem depender de um único serviço.
-- Automatizar tarefas de programação preservando **permissões, testes e revisão humana**.
-- Registrar a evolução do projeto de forma aberta, do protótipo inicial a uma futura aplicação com interface própria.
+- Explorar o impacto do **harness engineering** no uso prático de modelos pequenos, gratuitos e locais.
+- Construir um agente modular, com suporte a diferentes provedores e ferramentas.
+- Permitir desenvolvimento assistido por IA com aprovações, testes e revisão de código.
+- Manter o histórico técnico acessível, para que outras pessoas possam estudar e contribuir.
 
-## 🧩 Funcionalidades
+## Funcionalidades
 
-| Capacidade | O que oferece |
+| Recurso | O que faz |
 |---|---|
-| **CLI interativa** | Conversa com o agente e execução de comandos locais. |
-| **Múltiplos modelos** | Integração com diferentes provedores, incluindo opções locais e remotas conforme a configuração da versão. |
-| **Smart Router** | Seleção de modelos, fallback e acompanhamento de uso. |
-| **Skills e Tools** | Especialização por instruções e uso controlado de ferramentas. |
-| **Permissões** | Confirmação de operações com impacto no ambiente e controle de uso pago. |
-| **Repository Intelligence** | Navegação, busca e identificação de símbolos no código. |
-| **Planner e Executor** | Planejamento em etapas, checkpoints e retomada da execução. |
-| **Coding Agent** | Operações de edição, visualização de diffs, rollback e testes. |
-| **Memória e RAG** | Registro de decisões e recuperação de contexto do projeto. |
-| **MCP** | Comunicação com servidores de ferramentas externas via stdio. |
-| **Multiagentes** | Fluxo de Arquiteto, Desenvolvedor, QA e Revisor. |
-| **Observabilidade** | Informações de consumo, decisões e auditoria das operações. |
+| **CLI** | Conversas, seleção de projeto, comandos e execução local. |
+| **Dashboard Web** | Chat, seleção de workspace, arquivos, atividades, aprovações e acompanhamento de planos. |
+| **Extensão VS Code** | Painel do agente ao lado do editor, chat, workspace e autorizações conectados ao servidor local. |
+| **Multi-LLM / Smart Router** | Uso e seleção de provedores como OpenRouter, Groq, Gemini e Ollama, conforme a configuração. |
+| **Skills e Tools** | Instruções especializadas e ferramentas para arquivos, terminal, Git e busca. |
+| **Permissões e custos** | Aprovação de operações protegidas e controle de uso de modelos pagos. |
+| **Repository Intelligence** | Mapeamento do projeto, busca no código e localização de símbolos. |
+| **Planejamento e multiagentes** | Planner/Executor e papéis de Arquiteto, Desenvolvedor, QA e Revisor. |
+| **Coding Agent** | Escrita de código, diffs, rollback e execução de testes `unittest`. |
+| **Memória e RAG** | Notas persistentes por projeto e recuperação contextual de arquivos indexados. |
+| **MCP** | Integração com servidores de ferramentas externas via stdio. |
+| **Observabilidade** | Eventos, histórico operacional, auditoria e métricas locais de uso. |
 
-> A disponibilidade de cada funcionalidade **depende da versão**. Consulte o README do snapshot para conhecer os comandos e o escopo exato daquela implementação.
+As funcionalidades variam conforme a versão. O Dashboard e a extensão VS Code estão disponíveis a partir da **v0.7.0**.
 
-## 📚 Histórico de versões
+## O que mudou na v0.7.0
+
+A principal novidade é poder utilizar o Tesla sem depender exclusivamente da CLI:
+
+- **Dashboard local** servido por uma API FastAPI, com chat, explorador de arquivos e painéis de ferramentas, memória e multiagentes.
+- **Extensão inicial do VS Code** executada em modo de desenvolvimento, conectada ao backend por token local.
+- **Aprovações pela interface** para ações como escrita de arquivos e execução de testes.
+- **Persistência de projetos e planos**, melhorando a continuidade entre o navegador e a CLI.
+- **Melhorias no controle de execução**, nos vereditos do Revisor e na apresentação de resultados do QA.
+- **Nova identidade visual** com símbolo próprio no dashboard e na extensão.
+
+Para detalhes técnicos e comandos de cada interface, consulte o [README da v0.7.0](versions/v0.7.0/README.md).
+
+## Histórico de versões
 
 | Versão | Principal evolução | Código e documentação |
 |:---|---|---|
@@ -80,138 +93,151 @@ Este repositório reúne os **snapshots de código e a documentação de cada ve
 | **v0.5.8** | Memória de projeto e RAG lexical | [Explorar v0.5.8](versions/v0.5.8/README.md) |
 | **v0.5.9** | Integração MCP via stdio | [Explorar v0.5.9](versions/v0.5.9/README.md) |
 | **v0.6.0** | Orquestração multiagentes | [Explorar v0.6.0](versions/v0.6.0/README.md) |
-| **v0.7.0** | Dashboard Web, integração VS Code e estabilização multiagentes | **[Acessar versão atual](versions/v0.7.0/README.md)** |
+| **v0.7.0** | Dashboard Web, VS Code e estabilização | **[Explorar v0.7.0](versions/v0.7.0/README.md)** |
 
-> **Transparência histórica:** as pastas representam snapshots fornecidos pelo autor. Quando houver tags e commits reconstruídos a partir desses snapshots, eles **não representam as datas ou os commits originais de desenvolvimento**.
+> **Nota histórica:** os commits e tags montados a partir dos snapshots são reconstruções retrospectivas e não reproduzem necessariamente o histórico original de desenvolvimento.
 
-## 🚀 Como executar
+## Como executar a v0.7.0
 
 ### Pré-requisitos
 
-- Python instalado e disponível no terminal.
-- Git, caso deseje clonar o repositório.
-- Chaves de API para o(s) provedor(es) remoto(s) escolhido(s), quando necessárias.
+- Python 3 instalado e disponível no terminal (exemplos em Windows/PowerShell).
+- Git para clonar o repositório.
+- Chave de API do provedor remoto escolhido, se aplicável; para uso local, configure o Ollama conforme o README da versão.
 
-### 1. Clone o repositório
+### 1. Clonar e entrar na versão
 
 ```powershell
 git clone https://github.com/MrHendrix0611/tesla-agent.git
-cd tesla-agent
+cd tesla-agent\versions\v0.7.0
 ```
 
-### 2. Entre na versão mais recente
-
-```powershell
-cd versions\v0.6.0
-```
-
-### 3. Instale as dependências
+### 2. Instalar dependências
 
 ```powershell
 py -m pip install -r requirements.txt
 ```
 
-### 4. Configure o ambiente
+### 3. Configurar o ambiente
 
 ```powershell
 Copy-Item .env.example .env
+notepad .env
 ```
 
-Abra o arquivo `.env` e configure as variáveis necessárias para o provedor escolhido. **Nunca publique suas credenciais ou envie o `.env` ao GitHub.**
+Preencha apenas as credenciais necessárias. **O arquivo `.env` é privado e não deve ser publicado.**
 
-### 5. Execute os testes e inicie o agente
+### 4. Iniciar o Dashboard Web
 
 ```powershell
-py -m unittest discover -s tests -v
+py -m web.main
+```
+
+Abra **http://127.0.0.1:8765** e selecione a pasta do projeto em que deseja trabalhar. Mantenha o terminal do servidor aberto enquanto usar o painel.
+
+### 5. Usar a CLI (opcional)
+
+Em outro terminal, na mesma pasta da v0.7.0:
+
+```powershell
 py -m cli.main
 ```
 
-> Os exemplos acima usam **PowerShell no Windows**. Execute os comandos dentro da pasta da versão desejada; as dependências e funcionalidades podem variar entre snapshots. Alguns testes dependem da configuração local.
+### 6. Testar a instalação
 
-## 🧠 Arquitetura
+```powershell
+py -m unittest discover -s tests -v
+```
 
-Visão conceitual da **v0.6.0**, com destaque para a separação entre interface, orquestração, execução e integrações:
+**Estado da validação:** os 9 cenários funcionais de homologação do Dashboard, CLI e extensão foram reportados como aprovados em Windows. Em uma execução posterior da suíte automatizada no Windows, **122 testes rodaram, com 3 falhas e 1 erro**, envolvendo caminhos, finais de linha, HTTP e bloqueio de arquivo. Esses pontos seguem registrados para correção; não estamos declarando a suíte automatizada integralmente aprovada.
+
+### Integração com Visual Studio Code
+
+A extensão está incluída no projeto, mas **ainda não é uma extensão publicada na Marketplace**. Para testá-la:
+
+1. Inicie o servidor com `py -m web.main` e copie o token local exibido no terminal.
+2. Abra `versions/v0.7.0/vscode-extension` no VS Code (ou a pasta `vscode-extension`, caso já esteja dentro da versão).
+3. Pressione `F5` para abrir a janela **Extension Development Host**.
+4. Na paleta de comandos (`Ctrl + Shift + P`), execute **Tesla: Conectar ao agente local** e informe o token atual.
+5. Execute **Tesla: Abrir painel Agent** e selecione o workspace.
+
+O token de conexão pode mudar ao reiniciar o servidor. Nunca inclua esse token em commits, issues ou capturas públicas.
+
+## Arquitetura da v0.7.0
+
+A CLI, o Dashboard e a extensão utilizam o mesmo núcleo Python. O servidor local conecta as interfaces visuais ao agente e às operações autorizadas.
 
 ```mermaid
 flowchart TB
-    U["Usuário / CLI"] --> C["CLI e comandos"]
-    C --> O["Orquestrador multiagentes"]
-    O --> A["Arquiteto"]
-    O --> D["Desenvolvedor"]
-    O --> Q["QA"]
-    O --> R["Revisor"]
-    A --> P["Planner / Executor"]
-    D --> P
-    Q --> P
-    R --> P
-    P --> CORE["Núcleo do agente"]
-    CORE --> ROUTER["LLM Router / Provedores"]
-    CORE --> TOOLS["Tools / Permissões / MCP"]
-    CORE --> CONTEXT["Contexto / Memória / RAG"]
+    U["Usuário"] --> CLI["CLI Python"]
+    U --> WEB["Dashboard Web"]
+    U --> VSC["Extensão VS Code"]
+    WEB --> API["API FastAPI + WebSocket"]
+    VSC --> API
+    API --> S["Serviços e sessões por projeto"]
+    CLI --> CORE["Harness Tesla"]
+    S --> CORE
+    CORE --> ORQ["Planner / Executor / Multiagentes"]
+    CORE --> ROUTER["Smart Router e provedores LLM"]
+    CORE --> CTX["Contexto / Memória / RAG"]
+    ORQ --> TOOLS["Tools / Permissões / MCP"]
     TOOLS --> FS["Workspace e repositório"]
     TOOLS --> TEST["Testes e diagnósticos"]
 ```
 
-### Fluxo de funcionamento multiagentes
+### Fluxo de uma missão multiagentes
 
 ```mermaid
 flowchart TD
-    OBJ["Usuário define um objetivo"] --> PLAN["Planejamento das etapas"]
+    OBJ["Usuário define a missão"] --> PLAN["Tesla gera o plano"]
     PLAN --> ARCH["Arquiteto analisa o projeto"]
-    ARCH --> DEV["Desenvolvedor implementa alterações"]
-    DEV --> PERM{"Ação requer permissão?"}
-    PERM -->|Sim| APROV{"Usuário aprova?"}
-    APROV -->|Não| PAUSA["Pausar ou revisar etapa"]
-    APROV -->|Sim| QA["QA executa os testes"]
+    ARCH --> DEV["Desenvolvedor implementa"]
+    DEV --> PERM{"Operação protegida?"}
+    PERM -->|Sim| AUT{"Usuário autoriza?"}
+    AUT -->|Não| PAUSA["Pausa / ajuste / cancelamento"]
+    AUT -->|Sim| QA["QA executa testes reais"]
     PERM -->|Não| QA
-    QA --> CHECK{"Testes confirmados?"}
-    CHECK -->|Não| AJUSTE["Ajustes e nova execução"]
-    AJUSTE --> DEV
-    CHECK -->|Sim| REV["Revisor analisa e emite veredito"]
-    REV --> VER{"Aprovado?"}
-    VER -->|Não| AJUSTE
-    VER -->|Sim| FIM["Plano concluído"]
+    QA --> OK{"Testes confirmados?"}
+    OK -->|Não| REWORK["Revisar implementação"]
+    REWORK --> DEV
+    OK -->|Sim| REV["Revisor avalia código e evidências"]
+    REV --> VER{"Veredito"}
+    VER -->|Ajustes| REWORK
+    VER -->|Aprovado| FIM["Missão concluída"]
+    VER -->|Inconclusivo| PAUSA
 ```
 
-> Fluxogramas **resumidos e conceituais**. O comportamento real de aprovações, tentativas e retomadas depende do comando e da configuração utilizada.
+Os diagramas simplificam o funcionamento. Confirmações, checkpoints e retomadas dependem das ferramentas e configurações disponíveis.
 
-## 🗺️ Roadmap
+## Roadmap
 
-As etapas abaixo são **planejadas**, não funcionalidades já entregues:
+| Versão | Situação | Direção |
+|---|---|---|
+| **v0.7.0** | Implementada; manutenção em andamento | Dashboard Web, integração inicial com VS Code e estabilização. |
+| **v0.8.0** | Planejada | Aplicação desktop independente. |
+| **v0.9.0** | Planejada | Tesla IDE: editor de código, explorador e terminal integrados. |
+| **v1.0.0** | Planejada | Consolidação, segurança, distribuição e experiência completa. |
 
-| Versão | Próximo objetivo |
-|---|---|
-| **v0.7.0** | API do agente, dashboard web e integração inicial com VS Code. |
-| **v0.8.0** | Aplicação desktop independente com interface própria. |
-| **v0.9.0** | Evolução para Tesla IDE, com editor de código e terminal integrados. |
-| **v1.0.0** | Consolidação da plataforma, segurança, estabilidade e distribuição. |
+## Segurança e limitações
 
-## 🔐 Segurança e limitações
+O Tesla pode ler e modificar arquivos e executar comandos locais. Antes de aprovar uma ação, confira os argumentos, o destino e as alterações propostas.
 
-O Tesla executa ações locais e pode modificar arquivos. **Inspecione as operações propostas, revise diffs e utilize inicialmente um projeto de testes.**
+- Nunca publique `.env`, tokens de extensão, credenciais, logs locais ou dados privados de projetos.
+- Execute primeiro em pastas de teste e revise os diffs antes de aplicar alterações importantes.
+- Respostas de LLMs não substituem testes e revisão de código.
+- A v0.7.0 é experimental: o resultado depende de ambiente, dependências e provedores configurados.
 
-- Mantenha `.env`, credenciais, logs pessoais e dados locais fora do versionamento.
-- Confira o escopo do workspace antes de autorizar comandos e gravações.
-- Resultados de modelos de IA podem conter erros; execute testes e revise alterações.
-- Esta é uma iniciativa em desenvolvimento e **não deve ser considerada pronta para produção sem avaliação adicional**.
+## Licença
 
-## 📄 Licença
+Distribuído sob a **Licença MIT**. Consulte o arquivo [LICENSE](LICENSE) para os termos completos.
 
-O Tesla Agent é um projeto open source distribuído sob a **Licença MIT**.
+## Contribuindo
 
-Você pode utilizar, estudar, modificar e compartilhar o código, inclusive em projetos comerciais, respeitando os termos da licença.
+Relatos de bugs, melhorias e documentação são bem-vindos. Para colaborar, consulte [CONTRIBUTING.md](CONTRIBUTING.md) ou abra uma issue no repositório.
 
-Desenvolvido por **[Guilherme Hendrik](https://github.com/MrHendrix0611)**.
+## Autor
 
-Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## 🤝 Contribuições
-
-Sugestões, relatos de bugs, documentação e melhorias são bem-vindos. Antes de propor alterações, consulte as instruções do repositório em [`CONTRIBUTING.md`](CONTRIBUTING.md), quando disponíveis.
-
-## 👨‍💻 Autor
-
-**Guilherme Hendrik** — Criador e desenvolvedor do Tesla Agent.
+**Guilherme Hendrik** — criador e desenvolvedor do Tesla Agent.
 
 - **GitHub:** [@MrHendrix0611](https://github.com/MrHendrix0611)
 - **LinkedIn:** [Guilherme Hendrik](https://www.linkedin.com/in/guilherme-hendrik-59775326a/)
@@ -221,8 +247,6 @@ Sugestões, relatos de bugs, documentação e melhorias são bem-vindos. Antes d
 
 <div align="center">
 
-**⚡ Tesla Agent — Modelos são importantes. O harness transforma capacidade em execução.**
-
-*Em desenvolvimento, versão por versão.*
+**Tesla Agent · Desenvolvimento aberto, versão por versão.**
 
 </div>

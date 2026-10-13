@@ -79,8 +79,8 @@ Este repositório reúne os **snapshots de código e a documentação de cada ve
 | **v0.5.7** | Coding Agent: diff, rollback e testes | [Explorar v0.5.7](versions/v0.5.7/README.md) |
 | **v0.5.8** | Memória de projeto e RAG lexical | [Explorar v0.5.8](versions/v0.5.8/README.md) |
 | **v0.5.9** | Integração MCP via stdio | [Explorar v0.5.9](versions/v0.5.9/README.md) |
-| **v0.6.0** | Orquestração multiagentes | **[Explorar versão atual](versions/v0.6.0/README.md)** |
-| **v0.7.0** | Dashboard Web, integração VS Code e estabilização multiagentes | [Acessar v0.7.0](versions/v0.7.0/README.md) |
+| **v0.6.0** | Orquestração multiagentes | [Explorar v0.6.0](versions/v0.6.0/README.md) |
+| **v0.7.0** | Dashboard Web, integração VS Code e estabilização multiagentes | **[Acessar versão atual](versions/v0.7.0/README.md)** |
 
 > **Transparência histórica:** as pastas representam snapshots fornecidos pelo autor. Quando houver tags e commits reconstruídos a partir desses snapshots, eles **não representam as datas ou os commits originais de desenvolvimento**.
 

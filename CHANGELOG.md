@@ -2,6 +2,26 @@
 
 > Evolução documentada a partir de snapshots fornecidos, sem atribuir datas de commits originais.
 
+## [0.7.0] - 2026-10-13
+
+### Adicionado
+- Dashboard Web local com FastAPI.
+- Integração inicial com Visual Studio Code.
+- Aprovações visuais de ferramentas.
+- Visualização de código e alterações.
+- Acompanhamento da execução multiagentes.
+- Nova identidade visual do Tesla Agent.
+
+### Melhorado
+- Persistência de planos entre CLI e Web.
+- Reconhecimento dos vereditos do Revisor.
+- Controle de iterações e estados de execução.
+- Autenticação e reconexão da extensão VS Code.
+- Restauração de workspace e apresentação dos relatórios.
+
+### Validação
+- 9 de 9 casos de homologação funcional aprovados no Windows.
+
 ## v0.6.0 — Orquestração multiagentes
 
 - `core/multiagent.py` define papéis de Arquiteto, Desenvolvedor, QA e Revisor.

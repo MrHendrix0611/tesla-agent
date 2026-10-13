@@ -1,0 +1,25 @@
+{
+  "name": "tesla-agent",
+  "displayName": "Tesla Agent",
+  "description": "Painel local do Tesla Agent: chat, planos e aprovações",
+  "version": "0.7.0",
+  "publisher": "mrhendrix0611",
+  "private": true,
+  "engines": {"vscode": "^1.90.0"},
+  "categories": ["Other", "Machine Learning"],
+  "activationEvents": ["onCommand:tesla.openPanel", "onCommand:tesla.configure", "onCommand:tesla.openDashboard"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {"command": "tesla.configure", "title": "Tesla: Conectar ao agente local"},
+      {"command": "tesla.openPanel", "title": "Tesla: Abrir painel Agent"},
+      {"command": "tesla.openDashboard", "title": "Tesla: Abrir dashboard no navegador"}
+    ],
+    "configuration": {
+      "title": "Tesla Agent",
+      "properties": {
+        "tesla.apiUrl": {"type":"string","default":"http://127.0.0.1:8765","description":"URL da API local Tesla (somente loopback)."}
+      }
+    }
+  }
+}

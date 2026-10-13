@@ -1,0 +1,6 @@
+openai>=1.60,<3
+python-dotenv>=1,<2
+fastapi>=0.111,<1
+uvicorn>=0.30,<1
+websockets>=12,<17
+httpx>=0.27,<1

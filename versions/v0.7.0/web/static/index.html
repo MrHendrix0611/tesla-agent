@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#111522" />
+  <title>Tesla Agent — Workbench</title>
+  <link rel="icon" type="image/png" href="/ui/tesla-favicon.png" />
+  <link rel="stylesheet" href="/ui/styles.css" />
+  <script>window.TESLA_TOKEN = __TESLA_TOKEN_JSON__;</script>
+  <script src="/ui/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="rail" aria-label="Menu de navegação">
+      <div class="brand-mark" title="Tesla Agent"><img src="/ui/tesla-mark.png" alt="Símbolo orbital do Tesla" /></div>
+      <button class="rail-button active" data-view="agent" title="Tesla Agent">◈</button>
+      <button class="rail-button" data-view="team" title="Multiagentes">⬡</button>
+      <button class="rail-button" data-view="knowledge" title="Memória e RAG">⌕</button>
+      <button class="rail-button" data-view="tools" title="Ferramentas e MCP">⚙</button>
+      <div class="rail-spacer"></div>
+      <div class="online-indicator" title="Servidor local"></div>
+    </aside>
+
+    <aside class="project-sidebar">
+      <header class="sidebar-heading"><strong>WORKSPACE</strong><span id="project-indicator">Nenhum projeto</span></header>
+      <form id="project-form" class="project-form">
+        <label for="workspace">Pasta do projeto</label>
+        <input id="workspace" placeholder="F:\\Projetos\\MeuProjeto" autocomplete="off" />
+        <button type="submit" class="primary small">Selecionar projeto</button>
+      </form>
+      <div class="section-title"><span>ARQUIVOS</span><button id="refresh-files" title="Atualizar">↻</button></div>
+      <div class="file-tree" id="file-tree"><p class="muted">Selecione um projeto para listar arquivos.</p></div>
+      <div class="sidebar-bottom"><span>🔒</span> Acesso limitado ao projeto selecionado</div>
+    </aside>
+
+    <main class="workspace-area">
+      <header class="topbar"><div><span class="pill status-pill">LOCAL</span><strong>Tesla Workbench</strong><small>v0.7.0</small></div>
+      <div class="top-actions"><label for="model-select">Modelo</label><select id="model-select"><option>Carregando...</option></select><span class="connection-indicator" id="connection">Conectando...</span></div></header>
+      <section id="view-agent" class="view active">
+        <div class="section-head"><div><small>ASSISTENTE DE ENGENHARIA</small><h1>Construa com o Tesla<span class="accent">.</span></h1><p>Converse com o agente, analise seu código e acompanhe alterações com permissões explícitas.</p></div></div>
+        <div class="agent-layout">
+          <div class="chat-column">
+            <div class="chat-history" id="chat-history"><div class="intro-chat"><div class="intro-icon"><img src="/ui/tesla-mark.png" alt="Emblema Tesla" /></div><strong>Seu parceiro de desenvolvimento</strong><p>Selecione uma pasta e descreva o que você deseja construir, corrigir ou analisar.</p></div></div>
+            <form id="chat-form" class="composer"><textarea id="chat-input" rows="3" placeholder="Descreva uma tarefa para o Tesla...  (Ctrl + Enter para enviar)"></textarea><div class="composer-footer"><span>Ferramentas e execução exigem aprovação</span><button class="primary" type="submit" id="chat-send">Enviar ↗</button></div></form>
+          </div>
+          <div class="preview-column"><div class="panel-heading"><span>CÓDIGO / PRÉVIA</span><span id="selected-file">Nenhum arquivo selecionado</span></div><div class="preview-actions"><button class="secondary" id="file-diff" type="button">Ver diff</button><button class="secondary" id="show-file" type="button">Exibir código</button></div><pre class="code-view" id="code-view"><code>Selecione um arquivo no explorador para visualizar seu conteúdo.</code></pre></div>
+        </div>
+      </section>
+      <section id="view-team" class="view">
+        <div class="section-head"><div><small>ORQUESTRAÇÃO MULTIAGENTES</small><h1>Seu time de IA<span class="accent">.</span></h1><p>Arquiteto, Desenvolvedor, QA e Revisor operando com checkpoints e aprovações.</p></div></div>
+        <div class="team-layout"><div class="team-creator card"><h2>Nova missão</h2><form id="team-form"><textarea id="team-objective" rows="5" placeholder="Ex.: Desenvolva um módulo de autenticação, crie testes e revise o código..."></textarea><button type="submit" class="primary">Criar plano</button></form><div class="team-controls"><button id="team-run" class="secondary">▶ Executar etapas</button><button id="team-rework" class="secondary">↻ Solicitar rework</button><button id="team-cancel" class="secondary">Cancelar plano</button><button id="job-cancel" class="secondary">Interromper execução</button></div><div class="retry-row"><input id="retry-step" type="number" min="1" placeholder="Etapa #"/><button id="team-retry" class="secondary">Desbloquear etapa</button></div></div><div class="team-progress card"><div class="panel-heading"><span>PROGRESSO DO TIME</span><span id="team-status">Sem plano ativo</span></div><div class="team-summary" id="team-summary" aria-live="polite"></div><div class="role-steps" id="role-steps"><p class="muted">Crie um plano para acompanhar as etapas.</p></div></div></div>
+      </section>
+      <section id="view-knowledge" class="view"><div class="section-head"><div><small>CONTEXTO PERSISTENTE</small><h1>Memória do projeto<span class="accent">.</span></h1><p>Recupere decisões e trechos do código indexados pelo RAG lexical.</p></div></div><div class="knowledge-layout"><div class="card"><h2>Buscar no conhecimento</h2><form id="recall-form"><input id="recall-query" placeholder="O que você deseja encontrar?"/><button class="primary" type="submit">Buscar</button></form><div id="recall-result" class="recall-results"></div></div><div class="card"><h2>Notas salvas no projeto</h2><div id="memory-list" class="memory-list"><p class="muted">Selecione um projeto para carregar.</p></div><form id="remember-form" style="margin-top:14px"><label for="remember-note" class="muted">Nova nota de projeto</label><textarea id="remember-note" rows="2" placeholder="Registre uma decisão técnica..."></textarea><button class="secondary">Salvar nota</button></form></div></div></section>
+      <section id="view-tools" class="view"><div class="section-head"><div><small>OBSERVABILIDADE</small><h1>Ferramentas e execução<span class="accent">.</span></h1><p>Acompanhe MCP, o consumo de modelos e testes automatizados.</p></div></div><div class="knowledge-layout"><div class="card"><h2>Ferramentas / MCP</h2><div id="tools-info" class="tool-dashboard">Selecione um projeto.</div><button id="refresh-tools" class="secondary">Atualizar painel</button></div><div class="card"><h2>Executar testes unittest</h2><form id="test-form"><label for="test-target">Destino</label><input id="test-target" value="all"/><button class="primary" type="submit">Executar com aprovação</button></form><p class="muted">O resultado real será exibido no painel de atividades.</p><div class="section-title">HISTÓRICO DE EXECUÇÕES</div><div id="job-history" class="job-history">Nenhuma execução registrada.</div></div></div></section>
+    </main>
+
+    <aside class="activity-sidebar"><div class="activity-header"><strong>ATIVIDADE</strong><span class="live-dot"></span></div><p class="activity-description">Ações e eventos desta sessão</p><button id="activity-clear" class="secondary small" type="button">Limpar eventos visuais</button><div id="activity-list" class="activity-list"><p class="muted">Nenhum evento ainda.</p></div><div class="activity-footer"><div>Permissões <span>✓ Controladas</span></div><div>Workspace <span id="activity-project">Não selecionado</span></div></div></aside>
+  </div>
+  <dialog id="approval-dialog" class="approval-dialog"><form method="dialog"><div class="dialog-label">AUTORIZAÇÃO NECESSÁRIA</div><h2 id="approval-title">Confirmar ação?</h2><p id="approval-description"></p><pre id="approval-preview"></pre><div class="dialog-actions"><button id="approval-deny" value="cancel" class="secondary">Negar</button><button id="approval-allow" value="allow" class="primary">Permitir uma vez</button></div></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

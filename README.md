@@ -17,7 +17,7 @@ Do terminal ao Dashboard Web e à integração com VS Code, com a evolução do 
 
 [GitHub](https://github.com/MrHendrix0611) · [LinkedIn](https://www.linkedin.com/in/guilherme-hendrik-59775326a/) · [Instagram](https://www.instagram.com/hxtech_/)
 
-[Sobre](#sobre-o-projeto) · [Funcionalidades](#funcionalidades) · [Versões](#histórico-de-versões) · [Instalação](#como-executar-a-v070) · [Arquitetura](#arquitetura-da-v070) · [Roadmap](#roadmap)
+[Sobre](#sobre-o-projeto) · [Origem do nome](#origem-do-nome) · [Funcionalidades](#funcionalidades) · [Versões](#histórico-de-versões) · [Instalação](#como-executar-a-v070) · [Arquitetura](#arquitetura-da-v070) · [Roadmap](#roadmap)
 
 </div>
 
@@ -34,6 +34,16 @@ A primeira versão era uma CLI simples e se chamava **Hefesto Agent**. Nas vers�
 Este repositório preserva os snapshots e READMEs de **v0.1 a v0.7.0**. Cada pasta permite acompanhar o que foi implementado, quais comandos estavam disponíveis e como a arquitetura mudou.
 
 > **Estado do projeto:** experimental e em evolução. A v0.7.0 é a versão mais recente disponível; não é apresentada como produto pronto para ambientes de produção.
+
+## Origem do nome
+
+O nome **Tesla Agent** foi escolhido como uma homenagem a **Nikola Tesla (1856–1943)**, inventor e engenheiro cujas contribuições à eletricidade e à engenharia representam o espírito de investigação, criatividade e inovação que inspira este projeto.
+
+Essa referência é **ao inventor Nikola Tesla, e não à fabricante de veículos Tesla, Inc.** O Tesla Agent é um projeto autoral e independente de software livre, desenvolvido por **Guilherme Hendrik**, com foco em inteligência artificial, automação e engenharia de software.
+
+> **Declaração de independência:** o **Tesla Agent não possui vínculo, afiliação, patrocínio, autorização ou endosso da Tesla, Inc., de Elon Musk ou de suas empresas**. O nome é utilizado aqui em homenagem histórica ao inventor Nikola Tesla, sem intenção de sugerir qualquer relação empresarial ou comercial com essas organizações.
+
+A declaração acima esclarece a origem e a independência do projeto, mas **não constitui autorização para uso de marca registrada nem elimina eventuais conflitos de direitos de marca**.
 
 ## Objetivos
 

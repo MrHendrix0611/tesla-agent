@@ -43,8 +43,6 @@ Essa referência é **ao inventor Nikola Tesla, e não à fabricante de veículo
 
 > **Declaração de independência:** o **Tesla Agent não possui vínculo, afiliação, patrocínio, autorização ou endosso da Tesla, Inc., de Elon Musk ou de suas empresas**. O nome é utilizado aqui em homenagem histórica ao inventor Nikola Tesla, sem intenção de sugerir qualquer relação empresarial ou comercial com essas organizações.
 
-A declaração acima esclarece a origem e a independência do projeto, mas **não constitui autorização para uso de marca registrada nem elimina eventuais conflitos de direitos de marca**.
-
 ## Objetivos
 
 - Explorar o impacto do **harness engineering** no uso prático de modelos pequenos, gratuitos e locais.

@@ -169,8 +169,6 @@ A extensão está incluída no projeto, mas **ainda não é uma extensão public
 4. Na paleta de comandos (`Ctrl + Shift + P`), execute **Tesla: Conectar ao agente local** e informe o token atual.
 5. Execute **Tesla: Abrir painel Agent** e selecione o workspace.
 
-O token de conexão pode mudar ao reiniciar o servidor. Nunca inclua esse token em commits, issues ou capturas públicas.
-
 ## Arquitetura da v0.7.0
 
 A CLI, o Dashboard e a extensão utilizam o mesmo núcleo Python. O servidor local conecta as interfaces visuais ao agente e às operações autorizadas.
